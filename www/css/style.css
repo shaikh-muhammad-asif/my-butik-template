@@ -1,0 +1,27 @@
+.button{
+    display:block;
+    clear:both;
+    width:80%;
+    margin:15px auto;
+}
+
+ion-content.login{
+    background: url("../img/ok.png") center center no-repeat;
+    background-size: cover;
+}
+/*ion-content.login{*/
+    /*background-color:darkseagreen;*/
+/*}*/
+.margin{
+    margin-top: 195px;
+}
+/*.margin{*/
+    /*margin:10%;*/
+/*}*/
+.list.red{
+color: #0a9ec7;
+}
+/*.title-image {*/
+    /*position: absolute;*/
+    /*left:0px;*/
+/*}*/

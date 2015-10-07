@@ -1,0 +1,68 @@
+<ion-view title=" <strong>WOMAN'S</strong> ">
+    <ion-content class="woman" ng-controller="womanCtrl" >
+
+        <div class="button-bar button-small">
+            <a class="button button-dark button-small">COUNTRY</a>
+            <a class="button button-calm button-small" ng-click="bang()">Bangladesh</a>
+            <a class="button button-calm button-small" ng-click="pak()">Pakistan</a>
+        </div>
+
+
+        <!--<div class="list" ng-repeat="i in cloth">-->
+
+            <!--<a class="item item-thumbnail-left" href="#">-->
+                <!--<img ng-src="{{i.img}}">-->
+                <!--<h2>{{i.name}}</h2>-->
+                <!--<p>{{i.title}}</p>-->
+            <!--</a>-->
+        <!--</div>-->
+
+
+        <div class="list" ng-repeat="i in cloth">
+            <a class="item item-thumbnail-left" href="#" ng-click="visible=!visible" >
+                <img ng-src="{{i.img}}">
+                <h2>{{i.name}}</h2>
+                <p>{{i.title}}</p>
+                <p> <lable class="class assertive">{{(i.corr())*a|currency:cur}}</lable>
+                    <br/>
+                    <i class="icon ion-bag"></i>
+                    Shopping
+                    <!--<i class="icon ion-mic-a"></i>-->
+                    <!--Record album-->
+                </p>
+
+            </a>
+
+            <div ng-show="visible">
+                <ion-slide-box >
+                    <ion-slide>
+                        <div><img ng-src="{{i.img}}"></div>
+                    </ion-slide>
+                    <ion-slide>
+                        <div><img ng-src="{{i.img}}"></div>
+                    </ion-slide>
+                    <ion-slide>
+                        <div><img ng-src="{{i.img}}"></div>
+                    </ion-slide>
+                </ion-slide-box>
+
+                <div class="item tabs tabs-secondary tabs-icon-left">
+                    <a>
+                        <h2 class="class assertive"><br/><strong>{{(i.corr())*a|currency:cur}}</strong></h2>
+                    </a>
+                    <a class="tab-item" href="#" ng-click="like()">
+                        <i class="icon ion-thumbsup ico-balanced"></i>
+                        Like   {{count}}
+                    </a>
+                </div>
+
+                <div class="button-bar button-small">
+                    <a class="button button-energized button-small" ><h4 class="class dark">Call to order</h4></a>
+                    <a class="button button-calm button-small"><h4 class="class dark">Add to cart</h4></a>
+                </div>
+
+            </div>
+
+        </div>
+    </ion-content>
+</ion-view>
