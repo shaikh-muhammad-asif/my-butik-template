@@ -1,3 +1,1 @@
-# ionic app
 
-ionic app
